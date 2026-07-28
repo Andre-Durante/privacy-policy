@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TalentPing Privacy Policy</title>
+  <title>SideRead Privacy Policy</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -15,62 +15,140 @@
     }
     h1 { font-size: 28px; }
     h2 { font-size: 18px; margin-top: 32px; }
+    h3 { font-size: 16px; margin-top: 24px; }
     .updated { color: #666; font-size: 14px; margin-bottom: 32px; }
   </style>
 </head>
 <body>
-  <h1>TalentPing Privacy Policy</h1>
-  <p class="updated">Last updated: June 10, 2026</p>
+  <h1>SideRead Privacy Policy</h1>
+  <p class="updated">Last updated: July 28, 2026</p>
 
-  <h2>What TalentPing Does</h2>
+  <h2>What SideRead Does</h2>
   <p>
-    TalentPing is a browser extension that helps recruiters track candidates,
-    interview processes, and follow-up reminders.
+    SideRead is a browser extension that translates selected text, readable
+    webpages, and PDF documents. It can display PDF documents in original,
+    translated, or bilingual reading modes while preserving the document's
+    visual layout.
   </p>
 
-  <h2>Data We Collect</h2>
+  <h2>Data SideRead Handles</h2>
 
-  <h3>Account Information (via Google Sign-In)</h3>
+  <h3>Selected Text and Webpage Content</h3>
   <p>
-    When you sign in with Google, TalentPing receives your email address and an
-    authentication token via Supabase Auth. This is used solely to verify that
-    your account has been granted access to the extension. We do not access your
-    Gmail, contacts, or any other Google account data.
+    When you explicitly request a translation, SideRead processes the text you
+    selected or the readable content of the current webpage. This content is
+    processed locally in your browser and is not transmitted to SideRead, its
+    developer, or a SideRead-controlled server.
   </p>
 
-  <h3>Candidate Data</h3>
+  <h3>PDF Documents</h3>
   <p>
-    All candidate records, notes, tags, and reminders you create are stored
-    locally in your browser (<code>chrome.storage.local</code>) and are never
-    transmitted to or stored on any server. This data stays on your device and
-    is included only if you manually export it.
+    When you open a PDF using the SideRead viewer, the extension requests the
+    document from the URL where you opened it. PDF parsing, rendering, and text
+    extraction are performed locally in your browser using PDF.js.
+  </p>
+  <p>
+    PDF documents and their extracted text are not uploaded to SideRead or to a
+    SideRead-controlled server. The original website or server hosting the PDF
+    will receive the normal network request required to download the document.
   </p>
 
-  <h3>LinkedIn Data</h3>
+  <h3>Translation</h3>
   <p>
-    TalentPing reads the URL of the active browser tab to detect LinkedIn profile
-    pages and pre-fill a candidate's name and profile link. TalentPing does not
-    scrape, read, or modify the content of any web page.
+    SideRead uses Chrome's on-device Translator API. Translation is performed
+    locally by Chrome. SideRead does not send the text you translate to an
+    external translation service or to the developer.
+  </p>
+  <p>
+    Chrome may download language models required to support the selected
+    language pair. These downloads are managed by Chrome and not by SideRead.
+  </p>
+
+  <h3>Language Preferences and Translation Cache</h3>
+  <p>
+    SideRead stores your preferred source and target languages in
+    <code>chrome.storage.local</code>. It may also store a bounded local cache
+    containing up to 250 translated text entries to avoid translating the same
+    content repeatedly.
+  </p>
+  <p>
+    This information remains within your Chrome profile and is not transmitted
+    to the developer or stored on a SideRead-controlled server.
+  </p>
+
+  <h3>Browser Activity</h3>
+  <p>
+    SideRead uses temporary access to the browser tab where you invoke the
+    extension. This allows it to determine whether the current page is a webpage
+    or PDF and to perform the requested translation.
+  </p>
+  <p>
+    SideRead does not collect, store, or transmit your browsing history. It does
+    not monitor your browsing activity in the background for analytics,
+    advertising, or profiling.
   </p>
 
   <h2>Data Sharing</h2>
   <p>
-    We do not sell, rent, or share your data with third parties. Your email
-    address is stored in our access-control database (Supabase) solely to
-    determine whether you are authorized to use the extension.
+    We do not sell, rent, or share your selected text, webpage content, PDF
+    content, browsing activity, language preferences, or translation history
+    with advertisers, data brokers, or other third parties.
+  </p>
+  <p>
+    SideRead does not use advertising, analytics, user accounts, or a
+    developer-controlled translation service.
   </p>
 
-  <h2>Data Retention</h2>
+  <h2>Data Retention and Deletion</h2>
   <p>
-    You can delete your locally stored data at any time by removing the
-    extension or using the in-app data management tools. To request removal of
-    your account/email from our access list, contact us at the email below.
+    Language preferences and cached translations remain in your browser until
+    they are replaced, cleared, or the extension is removed. Uninstalling
+    SideRead removes its locally stored extension data from your Chrome profile.
+  </p>
+  <p>
+    Because SideRead does not maintain user accounts or store your document
+    content on its servers, there is no server-side document or translation
+    history associated with you.
+  </p>
+
+  <h2>Permissions</h2>
+  <p>
+    SideRead requests browser permissions only to provide its translation and
+    document-reading features. These permissions allow it to:
+  </p>
+  <ul>
+    <li>Access the tab where you explicitly invoke SideRead.</li>
+    <li>Add translation commands to Chrome's context menu.</li>
+    <li>Store language preferences and translations locally.</li>
+    <li>Activate SideRead's translation interface on the current webpage.</li>
+    <li>Read selected or readable page content after you request translation.</li>
+  </ul>
+
+  <h2>Remote Code</h2>
+  <p>
+    SideRead does not execute remotely hosted code. Its executable code,
+    including PDF.js, is packaged with the extension.
+  </p>
+
+  <h2>Changes to This Policy</h2>
+  <p>
+    If SideRead's data-handling practices change, this privacy policy and the
+    extension's Chrome Web Store disclosures will be updated before the changed
+    behavior is released.
+  </p>
+
+  <h2>Chrome Web Store Limited Use Disclosure</h2>
+  <p>
+    SideRead's use of information received from Google APIs will adhere to the
+    Chrome Web Store User Data Policy, including the Limited Use requirements.
   </p>
 
   <h2>Contact</h2>
   <p>
     Questions about this policy? Email
-    <a href="mailto:andredurante.jr@gmail.com">andredurante.jr@gmail.com</a>
+    <a href="mailto:andredurante.jr@gmail.com">
+      andredurante.jr@gmail.com
+    </a>
   </p>
 </body>
 </html>
